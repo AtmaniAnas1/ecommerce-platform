@@ -85,7 +85,7 @@ if ($mongodExe) {
         Write-Host "  Tentative $attempt/$maxAttempts..." -ForegroundColor Gray
     }
     
-    Write-Host "⚠ MongoDB a été lancé mais n'est pas encore accessible. Vérifiez la fenêtre MongoDB pour les erreurs." -ForegroundColor Yellow
+    Write-Host "[!] MongoDB a été lancé mais n'est pas encore accessible. Vérifiez la fenêtre MongoDB pour les erreurs." -ForegroundColor Yellow
 } else {
     Write-Host "✗ MongoDB n'a pas été trouvé sur ce système." -ForegroundColor Red
     Write-Host ""

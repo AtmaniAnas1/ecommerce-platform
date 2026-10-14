@@ -1,11 +1,11 @@
 # Guide d'Installation MongoDB sur Windows
 
-## 📥 Lien de téléchargement
+## Lien de téléchargement
 
 **MongoDB Community Server (Gratuit) :**
-👉 https://www.mongodb.com/try/download/community
+https://www.mongodb.com/try/download/community
 
-## 📋 Étapes d'installation
+## Étapes d'installation
 
 ### Étape 1 : Téléchargement
 
@@ -24,8 +24,8 @@
    - Sélectionnez **"Complete"** (installation complète)
    - Cliquez sur **Next**
 
-3. **Écran "Service Configuration"** ⚠️ **IMPORTANT** :
-   - ✅ **COCHEZ** la case **"Install MongoDB as a Service"**
+3. **Écran "Service Configuration"** **IMPORTANT** :
+   - **COCHEZ** la case **"Install MongoDB as a Service"**
    - Sélectionnez **"Run service as Network Service user"** (par défaut)
    - Le nom du service sera **"MongoDB"**
    - Cliquez sur **Next**
@@ -66,7 +66,7 @@ net start MongoDB
 Test-NetConnection -ComputerName localhost -Port 27017
 ```
 
-## ✅ Après l'installation
+## Après l'installation
 
 Une fois MongoDB installé et démarré :
 
@@ -85,7 +85,7 @@ Une fois MongoDB installé et démarré :
    python app.py
    ```
 
-## 🔧 Si vous avez oublié de cocher "Install as a Service"
+## Si vous avez oublié de cocher "Install as a Service"
 
 Si vous avez déjà installé MongoDB sans l'option service, vous pouvez :
 
@@ -108,14 +108,14 @@ New-Item -ItemType Directory -Force -Path "C:\data\db"
 Start-Service -Name "MongoDB"
 ```
 
-## 📝 Notes importantes
+## Notes importantes
 
 - **Port par défaut** : MongoDB utilise le port **27017**
 - **Répertoire de données** : Par défaut, MongoDB stocke les données dans `C:\data\db`
 - **Service Windows** : Une fois installé comme service, MongoDB démarre automatiquement au démarrage de Windows
 - **Arrêter MongoDB** : `net stop MongoDB` ou `Stop-Service -Name "MongoDB"`
 
-## 🆘 Dépannage
+## Dépannage
 
 ### Le service ne démarre pas
 - Vérifiez les logs dans : `C:\Program Files\MongoDB\Server\<version>\log\`

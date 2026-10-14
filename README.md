@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛍️ Flask MongoDB E-Commerce
+# Flask MongoDB E-Commerce
 
 **Plateforme e-commerce full-stack : catalogue produits, panier, commandes et back-office d'administration.**
 
@@ -14,15 +14,15 @@
 
 ---
 
-## 📖 Présentation
+## Présentation
 
 **Flask MongoDB E-Commerce** est une application web de vente en ligne construite avec **Python / Flask** et une base de données **NoSQL MongoDB**. Elle couvre l'ensemble du parcours d'achat — de la consultation du catalogue jusqu'à la confirmation de commande — ainsi qu'un espace d'administration complet pour piloter la boutique.
 
 Le modèle documentaire de MongoDB est exploité pour gérer des **produits à attributs variables** (taille, couleur, etc.) avec leurs propres prix et stocks, sans schéma rigide.
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
-### 🛒 Espace client
+### Espace client
 - **Catalogue** avec filtrage par catégorie et recherche plein texte
 - **Fiche produit** avec images, variations (attributs, prix, stock) et produits similaires
 - **Panier** en session : ajout, modification des quantités, suppression
@@ -30,20 +30,20 @@ Le modèle documentaire de MongoDB est exploité pour gérer des **produits à a
 - **Contrôle des stocks** au moment de la validation et décrément automatique
 - **Espace compte** : modification du profil et historique des commandes
 
-### 🔧 Back-office administrateur
+### Back-office administrateur
 - **Tableau de bord** avec indicateurs clés (produits, commandes, clients, commandes en attente)
 - **Gestion des produits** (CRUD) avec upload d'images et variations
 - **Gestion des catégories** (CRUD, slugs uniques)
 - **Suivi des commandes** avec filtrage et mise à jour du statut
 - **Gestion des utilisateurs** : activation / désactivation des comptes
 
-### 🔐 Sécurité
+### Sécurité
 - Hachage des mots de passe avec **bcrypt**
 - Routes protégées par décorateurs `@login_required` et `@admin_required`
 - Gestion des rôles (`client` / `admin`)
 - Configuration sensible externalisée via variables d'environnement
 
-## 🧱 Stack technique
+## Stack technique
 
 | Couche          | Technologies                                   |
 |-----------------|------------------------------------------------|
@@ -54,7 +54,7 @@ Le modèle documentaire de MongoDB est exploité pour gérer des **produits à a
 | Médias          | Pillow (traitement des images uploadées)       |
 | Configuration   | python-dotenv                                  |
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 .
@@ -92,7 +92,7 @@ Le modèle documentaire de MongoDB est exploité pour gérer des **produits à a
 | `categories` | Catégories du catalogue                      | `slug` (unique)                           |
 | `orders`     | Commandes et articles                        | `numero_commande` (unique), `client_id`, `statut`, `date_commande` |
 
-## 🚀 Installation
+## Installation
 
 ### Prérequis
 - Python **3.8+**
@@ -125,9 +125,9 @@ python app.py
 
 L'application est accessible sur **http://localhost:5000** et le back-office sur **http://localhost:5000/admin**.
 
-> 💡 Sous Windows, le script `start-mongodb.ps1` aide à démarrer MongoDB. Voir aussi [QUICKSTART.md](QUICKSTART.md), [INSTALL_MONGODB.md](INSTALL_MONGODB.md) et [MONGODB_TROUBLESHOOTING.md](MONGODB_TROUBLESHOOTING.md).
+> **Astuce :** sous Windows, le script `start-mongodb.ps1` aide à démarrer MongoDB. Voir aussi [QUICKSTART.md](QUICKSTART.md), [INSTALL_MONGODB.md](INSTALL_MONGODB.md) et [MONGODB_TROUBLESHOOTING.md](MONGODB_TROUBLESHOOTING.md).
 
-## ⚙️ Configuration
+## Configuration
 
 | Variable        | Description                         | Valeur par défaut            |
 |-----------------|-------------------------------------|------------------------------|
@@ -137,7 +137,7 @@ L'application est accessible sur **http://localhost:5000** et le back-office sur
 | `FLASK_DEBUG`   | Mode debug                          | `True`                       |
 | `APP_URL`       | URL publique de l'application       | `http://localhost:5000`      |
 
-## 👤 Compte administrateur par défaut
+## Compte administrateur par défaut
 
 Créé par `init_db.py` :
 
@@ -145,9 +145,9 @@ Créé par `init_db.py` :
 |---------------------|--------------|
 | `admin@example.com` | `admin123`   |
 
-> ⚠️ Modifiez ce mot de passe et la `SECRET_KEY` avant tout déploiement.
+> **Important :** modifiez ce mot de passe et la `SECRET_KEY` avant tout déploiement.
 
-## 🗺️ Pistes d'évolution
+## Pistes d'évolution
 
 - Intégration d'une passerelle de paiement réelle (Stripe, PayPal SDK)
 - Protection CSRF des formulaires (Flask-WTF)
@@ -155,10 +155,10 @@ Créé par `init_db.py` :
 - Conteneurisation Docker (application + MongoDB)
 - API REST pour un client mobile ou SPA
 
-## 👨‍💻 Auteur
+## Auteur
 
 **Anas Atmani** — [@AnnasAttt](https://github.com/AnnasAttt)
 
-## 📄 Licence
+## Licence
 
 Ce projet est distribué sous licence MIT.

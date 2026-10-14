@@ -32,9 +32,9 @@ def check_images():
                 if not exists:
                     # Essayer de trouver le fichier
                     if os.path.exists(os.path.join('static', 'images', 'uploads', os.path.basename(image_path))):
-                        print(f"    ⚠ Trouvé dans uploads/ mais chemin incorrect dans DB")
+                        print(f"    [!] Trouvé dans uploads/ mais chemin incorrect dans DB")
         else:
-            print("  ⚠ Aucune image")
+            print("  [!] Aucune image")
         
         print()
 
